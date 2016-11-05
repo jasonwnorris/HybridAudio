@@ -12,13 +12,19 @@ COMPILER_FLAGS = \
 
 # Define directories containing headers to include.
 INCLUDE_PATHS = \
+	-I/usr/local/include \
+	-I/usr/local/opt/openal-soft/include \
 	-I./include
 
 # Define directories containing libraries to include.
 LIBRARY_PATHS = \
+	-L/usr/local/lib
 
 # Define libraries to link into the executable.
 LINKER_FLAGS = \
+	-lSDL2 \
+	-lSDL2_mixer \
+	-framework OpenAL
 
 # Define source files.
 SOURCE_FILES = \
